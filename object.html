@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+  <p>Full name:<span id="demo"></span></p> 
+  <p id="demo1"></p> 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script>
+const person={firstName:"Naanma",
+ lastName:"Gabriella",
+  age:17, 
+  email:"didelnaanma@gmail.com",
+checkage: function CheckAge() {
+    if(this.age>=18){
+    console.log("Age status: Adult")
+    } else if (this.age<18) {
+      console.log(" Age status: Minor")
+    }
+  },
+
+};
+person.address= "Rayfield, Jos";
+person.email= "naanma@gmail.com";
+
+
+let calculator = {
+  operand1: 10,
+  operand2: 5,
+add:function () {
+  return this.operand1 + this.operand2;
+},
+subtract: function () {
+  return this.operand1 - this.operand2
+},
+multiply: function () {
+  return this.operand1 * this.operand2
+},
+divide: function () {
+  if(
+    this.operand2!==0){
+      return this.operand1/this.operand2;
+    }else{
+      return "cannot divide by zero";
+    }
+},
+};
+
+
+document.getElementById("demo").innerHTML = person.firstName + " " + person.lastName;
+person.checkage();
+
+console.log("Addition of 10 and 5:", calculator.add());
+console.log("subtraction of 5 from 10:", calculator.subtract());
+console.log("multiplication of 10 and 5:", calculator.multiply());
+console.log("dividing 10 by 5:", calculator.divide());
+
+</script>
+</body>
+</html>
